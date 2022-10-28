@@ -76,6 +76,8 @@
     }
 
     function createTodoApp(container, title = 'Список дел', todoListInit = []) {
+        console.log(localStorage);
+
         let todoAppTitle = createAppTitle(title);
         let todoItemForm = createTodoItemForm();
         let todoList = createTodoList();
@@ -95,7 +97,10 @@
                 return;
             }
 
+            let todoItemListForLocalStorage = [];
             let todoItem = createTodoItem({ name: todoItemForm.input.value, done: false });
+            localStorage.setItem('myCat', 'Tom');
+            console.log(localStorage);
 
             // Добавляем обработчики на кнопки
             todoItem.doneButton.addEventListener('click', function () {
