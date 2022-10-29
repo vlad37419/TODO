@@ -10,14 +10,21 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script defer src="todo-app.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let todoListInit = [
-                {name: 'Сходить в магазин', done: true},
-                {name: 'Купить молоко', done: true},
-                {name: 'Купить хлеб', done: false}
+        document.addEventListener('DOMContentLoaded', function () {
+            let defaultTodo = [
+                {
+                    id: 0,
+                    name: 'Сходить в магазин',
+                    done: true,
+                },
+                {
+                    id: 1,
+                    name: 'Купить молоко',
+                    done: false,
+                },
             ];
-            
-            createTodoApp(document.getElementById('todo-app'), 'Мои дела', todoListInit);
+
+            createTodoApp(document.getElementById('todo-app'), 'my_todo', 'Мои дела', defaultTodo);
         });
     </script>
 </head>
